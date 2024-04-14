@@ -16,11 +16,16 @@ namespace Unit_5Datacreator
 			
 			last_names = new string[,]
 			{
-			{ "González", "Martínez", "López" },
-			{ "Fernández", "Pérez", "Gómez" },
-			{ "Díaz", "Sánchez", "Torres" },
-			{ "Romero", "Ruiz", "Vázquez" },
-			{ "Jiménez", "Moreno", "Hernández" }
+			    { "González", "Ruiz" },
+				{ "Martínez", "Vázquez" },
+				{ "López", "Jiménez" },
+				{ "Fernández", "Moreno" },
+				{ "Pérez", "Hernández" },
+				{ "Gómez", "Castillo" },
+				{ "Díaz", "Navarro" },
+				{ "Sánchez", "Silva" },
+				{ "Torres", "Ramos" },
+				{ "Romero", "Medina" }
 			};
 
 			dates = new int[,,]
@@ -42,8 +47,7 @@ namespace Unit_5Datacreator
 
 		private void btncreate_Click(object sender, EventArgs e)
 		{
-			for (int i = 0; i < 2; i++)
-			{
+			
 				txtNames.Text = names[rand.Next(names.Length)];
 				txtpaternalsurname.Text = last_names[rand.Next(last_names.GetLength(0)), 0];
 				txtmothersurname.Text = last_names[rand.Next(last_names.GetLength(0)), 1];
@@ -52,7 +56,7 @@ namespace Unit_5Datacreator
 				int day = dates[rand.Next(dates.GetLength(0)), 2, 0];
 
 				txtdateofbirth.Text = "" + year+ "/" + month + "/" + day;
-			}
+			
 			
 		}
 
